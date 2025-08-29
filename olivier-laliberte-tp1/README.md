@@ -1,14 +1,13 @@
 ## TP1
 Concept de scène Godot interactive : 
-Une ville vue d'en haut ou tu peux interragir avec des routes pour les remettre au bon endroit.
+Une scène où tu peux jouer des cartes. Chaque carte jouée émet un son.
 
 Interactions :
-- Flèches multi-directionnelles : déplacent le point de focus du joueur sur les différentes parties du plateau.
-- Barre 'espace' : effectue une rotation de la pièce sélctionnée sur un angle de 90 degrés.
+- Drag and drop : joue une carte sur le jeu.
 
 Médias visuels :
-- [Kenny's Tiny Battle](https://www.kenney.nl/assets/tiny-battle) : pour tout les aspects visuels de la carte et du plateau.
+- [Kenny's Card pack](https://www.kenney.nl/assets/playing-cards-pack) : pour tout les aspects visuels des cartes et du plateau.
 - [UI-Pack](https://www.kenney.nl/assets/ui-pack) : pour tout ce qui touche au UI.
 
 Médias sonores : 
-- Bruitages de voitures et bruits ambiants de ville
+- Bruitages de cartes et effets sonores
