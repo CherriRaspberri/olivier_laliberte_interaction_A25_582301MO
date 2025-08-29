@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7xolpw608y27"]
+
+[ext_resource type="Script" uid="uid://djv7b03tkkfur" path="res://scene_01.gd" id="1_fa0a0"]
+[ext_resource type="Texture2D" uid="uid://dqc3xoqkkfi7o" path="res://background_elements/Backgrounds/backgroundEmpty.png" id="2_fa0a0"]
+[ext_resource type="Texture2D" uid="uid://dm6xci7jtg1s7" path="res://UI/PNG/Grey/Double/button_square_header_small_rectangle_screws.png" id="3_rne47"]
+
+[node name="Scene_01" type="Node2D"]
+script = ExtResource("1_fa0a0")
+
+[node name="BackgroundEmpty" type="Sprite2D" parent="."]
+position = Vector2(112, 448)
+texture = ExtResource("2_fa0a0")
+
+[node name="BackgroundEmpty2" type="Sprite2D" parent="."]
+position = Vector2(1136, 448)
+texture = ExtResource("2_fa0a0")
+
+[node name="ButtonSquareHeaderSmallRectangleScrews" type="Sprite2D" parent="."]
+position = Vector2(208, 80)
+texture = ExtResource("3_rne47")
