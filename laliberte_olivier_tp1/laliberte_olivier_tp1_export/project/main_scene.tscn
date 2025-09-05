@@ -1,5 +1,6 @@
-[gd_scene load_steps=25 format=3 uid="uid://f2rc8ce4ovt6"]
+[gd_scene load_steps=26 format=3 uid="uid://f2rc8ce4ovt6"]
 
+[ext_resource type="Texture2D" uid="uid://bat1cd6ylcddc" path="res://bg_texture.jpg" id="1_wr18j"]
 [ext_resource type="Texture2D" uid="uid://d2cwvex8pi516" path="res://main_elements/PNG/Dice/dieRed1.png" id="2_7ycvg"]
 [ext_resource type="Script" uid="uid://c43m4ba0rao4g" path="res://dice_onclick.gd" id="3_gyfs4"]
 [ext_resource type="Texture2D" uid="uid://b2yaxgrnu5647" path="res://main_elements/PNG/Dice/dieRed2.png" id="3_wr18j"]
@@ -168,40 +169,50 @@ animations = [{
 [node name="main_scene" type="Node2D"]
 metadata/_edit_horizontal_guides_ = [312.0]
 
-[node name="Button_click" type="Button" parent="."]
+[node name="BgTexture" type="Sprite2D" parent="."]
+position = Vector2(579, 340)
+scale = Vector2(0.951305, 0.782653)
+texture = ExtResource("1_wr18j")
+
+[node name="Button_onclick" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 7.2
-anchor_top = 12.8
-anchor_right = 10.4
-anchor_bottom = 14.6
-offset_left = 208.0
-offset_top = 416.0
-offset_right = 368.0
-offset_bottom = 488.0
+offset_left = 496.0
+offset_top = 192.0
+offset_right = 656.0
+offset_bottom = 264.0
+focus_mode = 1
 text = "Press me!"
 
-[node name="dice_onclick" type="AnimatedSprite2D" parent="Button_click"]
+[node name="dice_onclick" type="AnimatedSprite2D" parent="Button_onclick"]
 position = Vector2(80, -72)
 sprite_frames = SubResource("SpriteFrames_d5x1h")
 animation = &"dice_06"
 script = ExtResource("3_gyfs4")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_click/dice_onclick"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_onclick/dice_onclick"]
 stream = ExtResource("4_d5x1h")
 volume_db = -15.0
 
-[node name="Label" type="Label" parent="."]
-offset_left = 544.0
-offset_top = 432.0
-offset_right = 1049.0
-offset_bottom = 536.0
-text = "Press the space bar down below!"
-label_settings = SubResource("LabelSettings_d5x1h")
+[node name="label_ontoggle" type="Label" parent="."]
+offset_left = 304.0
+offset_top = 392.0
+offset_right = 857.0
+offset_bottom = 533.0
+text = "Press ← to roll!     Press → to roll!
 
-[node name="dice_ontoggle" type="AnimatedSprite2D" parent="Label"]
-position = Vector2(272, -88)
+Or press the space bar down below!"
+label_settings = SubResource("LabelSettings_d5x1h")
+horizontal_alignment = 1
+
+[node name="dice_01_ontoggle" type="AnimatedSprite2D" parent="label_ontoggle"]
+position = Vector2(136, -48)
 sprite_frames = SubResource("SpriteFrames_7ycvg")
 animation = &"dice_06"
 script = ExtResource("9_7ycvg")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Label/dice_ontoggle"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="label_ontoggle/dice_01_ontoggle"]
+
+[node name="dice_02_ontoggle" type="AnimatedSprite2D" parent="label_ontoggle"]
+position = Vector2(400, -48)
+sprite_frames = SubResource("SpriteFrames_7ycvg")
+animation = &"dice_06"

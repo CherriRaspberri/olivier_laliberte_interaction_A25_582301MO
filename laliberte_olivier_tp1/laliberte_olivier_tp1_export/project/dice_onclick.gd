@@ -23,7 +23,6 @@ func generate_random_nb():
 func on_button_pressed():
 	#disables the button until the animation is done
 	button.disabled = true
-	
 	#ANIMATION:
 	#plays the sound 
 	$AudioStreamPlayer.play()
@@ -33,11 +32,9 @@ func on_button_pressed():
 		var tween = create_tween()
 		tween.tween_property(self, "rotation", rotation + 2 * PI, 0.5)
 		await get_tree().create_timer(0.51).timeout
-	
 	#DICE:
 	#changes the number of the dice
 	generate_random_nb()
-	
 	#re-enables the button to be clicked
 	button.disabled = false
 
