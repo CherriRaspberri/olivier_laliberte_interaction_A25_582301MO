@@ -1,0 +1,207 @@
+[gd_scene load_steps=25 format=3 uid="uid://f2rc8ce4ovt6"]
+
+[ext_resource type="Texture2D" uid="uid://d2cwvex8pi516" path="res://main_elements/PNG/Dice/dieRed1.png" id="2_7ycvg"]
+[ext_resource type="Script" uid="uid://c43m4ba0rao4g" path="res://dice_onclick.gd" id="3_gyfs4"]
+[ext_resource type="Texture2D" uid="uid://b2yaxgrnu5647" path="res://main_elements/PNG/Dice/dieRed2.png" id="3_wr18j"]
+[ext_resource type="AudioStream" uid="uid://c8cr4geepy13i" path="res://sounds/drumroll_2secs.mp3" id="4_d5x1h"]
+[ext_resource type="Texture2D" uid="uid://wffvmxty4win" path="res://main_elements/PNG/Dice/dieRed3.png" id="4_qwutr"]
+[ext_resource type="Texture2D" uid="uid://bndric0f7gqee" path="res://main_elements/PNG/Dice/dieRed4.png" id="5_671wp"]
+[ext_resource type="Texture2D" uid="uid://dwe5kcqmfqnb8" path="res://main_elements/PNG/Dice/dieRed5.png" id="6_mo76n"]
+[ext_resource type="Texture2D" uid="uid://cyo3ugopppbon" path="res://main_elements/PNG/Dice/dieRed6.png" id="7_42l1d"]
+[ext_resource type="Script" uid="uid://bbsf0ef4o40vg" path="res://dice_ontoggle.gd" id="9_7ycvg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jcla"]
+atlas = ExtResource("2_7ycvg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m35m6"]
+atlas = ExtResource("3_wr18j")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0ygc"]
+atlas = ExtResource("4_qwutr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7th4q"]
+atlas = ExtResource("5_671wp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jybn"]
+atlas = ExtResource("6_mo76n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84odl"]
+atlas = ExtResource("7_42l1d")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d5x1h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jcla")
+}],
+"loop": true,
+"name": &"dice_01",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m35m6")
+}],
+"loop": true,
+"name": &"dice_02",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0ygc")
+}],
+"loop": true,
+"name": &"dice_03",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7th4q")
+}],
+"loop": true,
+"name": &"dice_04",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jybn")
+}],
+"loop": true,
+"name": &"dice_05",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84odl")
+}],
+"loop": true,
+"name": &"dice_06",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_d5x1h"]
+font_size = 32
+outline_size = 2
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ycvg"]
+atlas = ExtResource("2_7ycvg")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wr18j"]
+atlas = ExtResource("3_wr18j")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qwutr"]
+atlas = ExtResource("4_qwutr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_671wp"]
+atlas = ExtResource("5_671wp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mo76n"]
+atlas = ExtResource("6_mo76n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42l1d"]
+atlas = ExtResource("7_42l1d")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7ycvg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ycvg")
+}],
+"loop": true,
+"name": &"dice_01",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wr18j")
+}],
+"loop": true,
+"name": &"dice_02",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qwutr")
+}],
+"loop": true,
+"name": &"dice_03",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_671wp")
+}],
+"loop": true,
+"name": &"dice_04",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mo76n")
+}],
+"loop": true,
+"name": &"dice_05",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42l1d")
+}],
+"loop": true,
+"name": &"dice_06",
+"speed": 5.0
+}]
+
+[node name="main_scene" type="Node2D"]
+metadata/_edit_horizontal_guides_ = [312.0]
+
+[node name="Button_click" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 7.2
+anchor_top = 12.8
+anchor_right = 10.4
+anchor_bottom = 14.6
+offset_left = 208.0
+offset_top = 416.0
+offset_right = 368.0
+offset_bottom = 488.0
+text = "Press me!"
+
+[node name="dice_onclick" type="AnimatedSprite2D" parent="Button_click"]
+position = Vector2(80, -72)
+sprite_frames = SubResource("SpriteFrames_d5x1h")
+animation = &"dice_06"
+script = ExtResource("3_gyfs4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_click/dice_onclick"]
+stream = ExtResource("4_d5x1h")
+volume_db = -15.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 544.0
+offset_top = 432.0
+offset_right = 1049.0
+offset_bottom = 536.0
+text = "Press the space bar down below!"
+label_settings = SubResource("LabelSettings_d5x1h")
+
+[node name="dice_ontoggle" type="AnimatedSprite2D" parent="Label"]
+position = Vector2(272, -88)
+sprite_frames = SubResource("SpriteFrames_7ycvg")
+animation = &"dice_06"
+script = ExtResource("9_7ycvg")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Label/dice_ontoggle"]
