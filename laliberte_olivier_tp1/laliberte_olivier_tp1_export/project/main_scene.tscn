@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://f2rc8ce4ovt6"]
+[gd_scene load_steps=27 format=3 uid="uid://f2rc8ce4ovt6"]
 
 [ext_resource type="Texture2D" uid="uid://bat1cd6ylcddc" path="res://bg_texture.jpg" id="1_wr18j"]
 [ext_resource type="Texture2D" uid="uid://d2cwvex8pi516" path="res://main_elements/PNG/Dice/dieRed1.png" id="2_7ycvg"]
@@ -9,7 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://bndric0f7gqee" path="res://main_elements/PNG/Dice/dieRed4.png" id="5_671wp"]
 [ext_resource type="Texture2D" uid="uid://dwe5kcqmfqnb8" path="res://main_elements/PNG/Dice/dieRed5.png" id="6_mo76n"]
 [ext_resource type="Texture2D" uid="uid://cyo3ugopppbon" path="res://main_elements/PNG/Dice/dieRed6.png" id="7_42l1d"]
-[ext_resource type="Script" uid="uid://bbsf0ef4o40vg" path="res://dice_ontoggle.gd" id="9_7ycvg"]
+[ext_resource type="Script" uid="uid://bbsf0ef4o40vg" path="res://dice_left_ontoggle.gd" id="9_7ycvg"]
+[ext_resource type="Script" uid="uid://d1yy4325nti1o" path="res://dice_right_ontoggle.gd" id="11_qwutr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2jcla"]
 atlas = ExtResource("2_7ycvg")
@@ -175,7 +176,6 @@ scale = Vector2(0.951305, 0.782653)
 texture = ExtResource("1_wr18j")
 
 [node name="Button_onclick" type="Button" parent="."]
-anchors_preset = -1
 offset_left = 496.0
 offset_top = 192.0
 offset_right = 656.0
@@ -204,15 +204,16 @@ Or press the space bar down below!"
 label_settings = SubResource("LabelSettings_d5x1h")
 horizontal_alignment = 1
 
-[node name="dice_01_ontoggle" type="AnimatedSprite2D" parent="label_ontoggle"]
+[node name="dice_left_ontoggle" type="AnimatedSprite2D" parent="label_ontoggle"]
 position = Vector2(136, -48)
 sprite_frames = SubResource("SpriteFrames_7ycvg")
 animation = &"dice_06"
 script = ExtResource("9_7ycvg")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="label_ontoggle/dice_01_ontoggle"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="label_ontoggle/dice_left_ontoggle"]
 
-[node name="dice_02_ontoggle" type="AnimatedSprite2D" parent="label_ontoggle"]
+[node name="dice_right_ontoggle" type="AnimatedSprite2D" parent="label_ontoggle"]
 position = Vector2(400, -48)
 sprite_frames = SubResource("SpriteFrames_7ycvg")
 animation = &"dice_06"
+script = ExtResource("11_qwutr")
