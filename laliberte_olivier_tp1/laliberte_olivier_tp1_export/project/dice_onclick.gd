@@ -1,7 +1,7 @@
 extends AnimatedSprite2D
 #DICE:
 #nb generated for the value on the dice
-var random_nb = 1;
+var random_nb = 1
 
 #ANIMATION:
 #number of rotations for the animation

@@ -186,7 +186,7 @@ text = "Press me!"
 [node name="dice_onclick" type="AnimatedSprite2D" parent="Button_onclick"]
 position = Vector2(80, -72)
 sprite_frames = SubResource("SpriteFrames_d5x1h")
-animation = &"dice_06"
+animation = &"dice_01"
 script = ExtResource("3_gyfs4")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button_onclick/dice_onclick"]
@@ -195,12 +195,10 @@ volume_db = -15.0
 
 [node name="label_ontoggle" type="Label" parent="."]
 offset_left = 304.0
-offset_top = 392.0
+offset_top = 493.0
 offset_right = 857.0
-offset_bottom = 533.0
-text = "Press ← to roll!     Press → to roll!
-
-Or press the space bar down below!"
+offset_bottom = 541.0
+text = "Press ← to roll!     Press → to roll!"
 label_settings = SubResource("LabelSettings_d5x1h")
 horizontal_alignment = 1
 
